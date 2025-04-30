@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_레이어_2" data-name="레이어 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 94.04 112.94">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ddd;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke: #172226;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-2, .cls-4 {
+        stroke-linecap: round;
+      }
+
+      .cls-5 {
+        fill: #fff9d9;
+        stroke-width: 0px;
+      }
+
+      .cls-4 {
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="_레이어_1-2" data-name="레이어 1">
+    <g>
+      <g>
+        <path class="cls-3" d="M92.54,58.58c0,29.72-20.38,48.33-45.52,48.33S1.5,88.29,1.5,58.58,21.88,1.5,47.02,1.5s45.52,27.36,45.52,57.08Z"/>
+        <g>
+          <circle class="cls-5" cx="24.33" cy="58.31" r="10.09"/>
+          <line class="cls-2" x1="27.9" y1="51.8" x2="37.1" y2="47.46"/>
+        </g>
+        <g>
+          <circle class="cls-5" cx="69.72" cy="58.31" r="10.09"/>
+          <line class="cls-2" x1="66.14" y1="51.8" x2="56.95" y2="47.46"/>
+        </g>
+        <g>
+          <path class="cls-4" d="M47.02,51.11s-.34,2.47-3.66,2.38"/>
+          <path class="cls-4" d="M47.02,51.11s.34,2.47,3.66,2.38"/>
+        </g>
+      </g>
+      <ellipse class="cls-1" cx="21.14" cy="99.54" rx="9.16" ry="12.68" transform="translate(-46.94 23.91) rotate(-30)"/>
+      <ellipse class="cls-1" cx="72.9" cy="99.54" rx="12.68" ry="9.16" transform="translate(-49.76 112.91) rotate(-60)"/>
+      <path class="cls-2" d="M15.84,64.7c3.06,1.51,9.73,1.7,9.73,1.7,4,0,7.23,3.6,7.23,8.04s-3.24,8.04-7.23,8.04h-5.31"/>
+      <path class="cls-2" d="M78.04,64.54c-3.06,1.51-9.73,1.7-9.73,1.7-4,0-7.23,3.6-7.23,8.04s3.24,8.04,7.23,8.04h5.31"/>
+    </g>
+  </g>
+</svg>
