@@ -1,22 +1,22 @@
 export default function Inquiry() {
   const inquiries = [
     {
-      title: "일단해 쇼핑",
-      highlight: "판매자 입점",
-      desc: "관련 문의",
-      email: "doaction93@gmail.com",
+      title: '일단해 쇼핑',
+      highlight: '판매자 입점',
+      desc: '관련 문의',
+      email: 'doaction93@gmail.com',
     },
     {
-      title: "일단해 제휴",
-      highlight: "제휴 광고",
-      desc: "관련 문의",
-      email: "doaction93@gmail.com",
+      title: '일단해 제휴',
+      highlight: '제휴 광고',
+      desc: '관련 문의',
+      email: 'doaction93@gmail.com',
     },
     {
-      title: "일단해 앱 서비스",
-      highlight: "서비스",
-      desc: "관련 문의",
-      email: "doaction93@gmail.com",
+      title: '일단해 앱 서비스',
+      highlight: '서비스',
+      desc: '관련 문의',
+      email: 'doaction93@gmail.com',
     },
   ];
   

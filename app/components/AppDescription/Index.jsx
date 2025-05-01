@@ -55,7 +55,7 @@ export default function AppDescription() {
             <img
                 src={cellphoneUrl[idx]}
           
-          alt="App cellphone" 
+          alt='App cellphone' 
           style={styles.image} 
         />
       </div>

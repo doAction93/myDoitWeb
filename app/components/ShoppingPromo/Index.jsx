@@ -28,15 +28,15 @@ export default function ShoppingPromo({ isActive }) {
       <div style={styles.scroller}>
         {[...Array(2)].map((_, i) => (
           <div key={i} style={styles.row}>
-            <img src="/appImage2.svg" style={styles.image} />
-            <img src="/appImage3.svg" style={styles.image} />
-            <img src="/appImage4.svg" style={styles.image} />
-            <img src="/appImage5.svg" style={styles.image} />
-            <img src="/appImage6.svg" style={styles.image} />
-            <img src="/appImage7.svg" style={styles.image} />
-            <img src="/appImage8.svg" style={styles.image} />
-            <img src="/appImage9.svg" style={styles.image} />
-            <img src="/appImage10.svg" style={styles.image} />
+            <img src='/appImage2.svg' style={styles.image} />
+            <img src='/appImage3.svg' style={styles.image} />
+            <img src='/appImage4.svg' style={styles.image} />
+            <img src='/appImage5.svg' style={styles.image} />
+            <img src='/appImage6.svg' style={styles.image} />
+            <img src='/appImage7.svg' style={styles.image} />
+            <img src='/appImage8.svg' style={styles.image} />
+            <img src='/appImage9.svg' style={styles.image} />
+            <img src='/appImage10.svg' style={styles.image} />
           </div>
         ))}
       </div>

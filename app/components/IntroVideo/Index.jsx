@@ -65,14 +65,14 @@ export default function IntroVideo({ isActive }) {
               }}
             >
               <div style={paragraph} >
-                <h2 style={paragraphTitleStyle} className={isActive ? 'title' : ''}>"작은 습관, 큰 변화! 일단해로 성장해요"</h2>
-                <p style={paragraphStyle} className={isActive ? 'title' : ''}>"단계별 챌린지로 나만의 포인트 쌓고 포인트로 쇼핑해요"</p>
+                <h2 style={paragraphTitleStyle} className={isActive ? 'title' : ''}>작은 습관, 큰 변화! 일단해로 성장해요</h2>
+                <p style={paragraphStyle} className={isActive ? 'title' : ''}>단계별 챌린지로 나만의 포인트 쌓고 포인트로 쇼핑해요</p>
               </div>
 
               <div style={eggContainer} >
               <img
                 src={eggUrls[idx]}
-                alt="character"
+                alt='character'
                 style={{
                   ...eggImage,
                   opacity,

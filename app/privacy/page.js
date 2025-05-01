@@ -73,9 +73,9 @@ export default function PrivacyPage() {
 
       
         <table
-          border="1"
-          cellSpacing="0"       // HTML attribute: cellspacing → cellSpacing (camelCase)
-          cellPadding="8"       // HTML attribute: cellpadding → cellPadding (camelCase)
+          border='1'
+          cellSpacing='0'       // HTML attribute: cellspacing → cellSpacing (camelCase)
+          cellPadding='8'       // HTML attribute: cellpadding → cellPadding (camelCase)
           style={{              // 인라인 스타일 객체로 변경
             borderCollapse: 'collapse',
             textAlign: 'center',
