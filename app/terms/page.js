@@ -27,21 +27,44 @@ export default function TermsPage() {
           }}
 >
         <h1 style={{ fontSize: '2rem', marginBottom: '20px' }}>이용약관</h1>
-        <button
-          onClick={handleBackClick}
-          style={{
-            backgroundColor: '#FA7852',  // 버튼 배경색
-            color: '#ffffff',             // 텍스트 색상
-            fontSize: '1rem',           // 폰트 크기
-            width: '100px',               // 가로 크기
-            height: '60px',               // 세로 크기
-            border: 'none',               // 테두리 제거
-            borderRadius: '20px',          // (선택- 모서리 둥글게
-            cursor: 'pointer',            // 마우스 커서 포인터
-          }}
-          >
-          뒤로가기
-        </button>
+        <div>
+          <button
+            onClick={handleBackClick}
+            style={{
+              backgroundColor: '#FA7852',  // 버튼 배경색
+              color: '#ffffff',             // 텍스트 색상
+              fontSize: '1rem',           // 폰트 크기
+              width: '100px',               // 가로 크기
+              height: '60px',               // 세로 크기
+              border: 'none',               // 테두리 제거
+              borderRadius: '20px',          // (선택- 모서리 둥글게
+              cursor: 'pointer',            // 마우스 커서 포인터
+              marginRight: '20px' 
+            }}
+            >
+            뒤로가기
+          </button>
+
+          <button
+            onClick={() => {
+              window.location.href = 'mailto:doaction93@gmail.com';
+            }}
+            style={{
+              backgroundColor: '#ffffff',
+              color: '#000000',
+              fontSize: '1rem',
+              width: '100px',
+              height: '60px',
+              border: '1px solid #ccc', // 회색 테두리
+              borderRadius: '20px',
+              cursor: 'pointer',
+            }}
+            >
+            문의하기
+          </button>
+          
+        </div>
+       
       </div>
       
         <h2 style={headTitleStyle}>
