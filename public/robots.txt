@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://my-doit-web-zpwg.vercel.app/sitemap.xml
