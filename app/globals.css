@@ -41,3 +41,60 @@ a {
     color-scheme: dark;
   }
 }
+@media (max-width: 480px) {
+  /* 예: 컨테이너를 세로(column)로 바꾸기 */
+  .headerSytle {
+    display: none !important;
+  }
+  .container {
+    flex-direction: column !important;
+    padding: 20px !important;
+  }
+
+  /* 예: 이미지 영역 숨기기 */
+  .imageContainer {
+    display: none !important;
+  }
+
+  /* 예: 버튼 크기·여백 조정 */
+  .button {
+    font-size: clamp(0.8rem, 2.5vw, 1rem) !important;
+    margin: 8px 0 !important;
+    width: 100% !important;
+  }
+
+
+  .footer .topRow,
+  .footer .divider, .leftText,
+  .footer .addressWrapper {
+    display: none !important;
+  }
+
+  /* 푸터 전체는 중앙 정렬 */
+  .footer {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 10px !important;
+  }
+
+  /* linkGroup(링크 묶음)만 가로 중앙, 간격 축소 */
+  .footer .linkGroup {
+    justify-content: center !important;
+    gap: 10px !important;
+  }
+
+
+  .inquiryContainer {
+    flex-direction: column;
+    padding: 20px 0; /* 필요하면 여백도 조정 */
+  }
+  /* card는 전체 너비에 가깝게, aspectRatio 해제 */
+  .inquiryCard {
+    width: 90vw !important;
+    max-width: none !important;
+    aspect-ratio: auto !important;
+    margin-bottom: 16px; /* 카드 간 간격 */
+  }
+  /* header, nav, footer 등 다른 요소도 여기에 추가 */
+}

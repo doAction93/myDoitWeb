@@ -29,43 +29,54 @@ export default function PrivacyPage() {
           }}>
 
          
-         <h1 style={{ fontSize: '2rem', marginBottom: '20px' }}>일단해 앱 개인정보 처리방침</h1>
+         <h1 style={{ fontSize: 'clamp(1rem, 5vw, 2rem)', marginBottom: '20px' }}>개인정보 처리방침</h1>
+
+         <div>
+          <button
+            onClick={handleBackClick}
+            style={{
+              backgroundColor: '#FA7852',  // 버튼 배경색
+              color: '#ffffff',             // 텍스트 색상
+              fontSize: 'clamp(0.2rem, 2.5vw, 1.2rem)',           // 폰트 크기
+              width: '12vw',               // 가로 크기
+              height: '8vh',
+              maxwidth: "100px",
+              minwidth: "60px",              // 세로 크기
+              border: 'none',               // 테두리 제거
+              borderRadius: 'clamp(5px, 2.5vw, 20px)',          // (선택- 모서리 둥글게
+              cursor: 'pointer',            // 마우스 커서 포인터
+              marginRight: '20px' 
+            }}
+            >
+            뒤로가기
+          </button>
+
+          <a
+              href="mailto:doaction93@gmail.com"
+              style={{
+                display: 'inline-block',    // a 태그를 블록처럼
+                textDecoration: 'none',     // 밑줄 제거
+              }}
+            >
 
           <button
-              onClick={handleBackClick}
-              style={{
-                backgroundColor: '#FA7852',  // 버튼 배경색
-                color: '#ffffff',             // 텍스트 색상
-                fontSize: '1rem',           // 폰트 크기
-                width: '100px',               // 가로 크기
-                height: '60px',               // 세로 크기
-                border: 'none',               // 테두리 제거
-                borderRadius: '20px',          // (선택- 모서리 둥글게
-                cursor: 'pointer', 
-                marginRight: '20px'           // 마우스 커서 포인터
-              }}
-              >
-              뒤로가기
-        </button>
-
-
-        <button
-            onClick={() => {
-              window.location.href = 'mailto:doaction93@gmail.com';
-            }}
             style={{
               backgroundColor: '#ffffff',
               color: '#000000',
-              fontSize: '1rem',
-              width: '100px',
-              height: '60px',
+              fontSize: 'clamp(0.2rem, 2.5vw, 1.2rem)', 
+              width: '12vw',               // 가로 크기
+              height: '8vh',
+              maxwidth: "100px",
+              minwidth: "60px",
               border: '1px solid #ccc', // 회색 테두리
-              borderRadius: '20px',
+              borderRadius: 'clamp(5px, 2.5vw, 20px)',  
               cursor: 'pointer',
             }}
             >
             문의하기
           </button>
+          </a>
+        </div>
         </div>
 
 

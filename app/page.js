@@ -94,7 +94,7 @@ export default function Home() {
   };
 
   const logoStyle = {
-    height: '30px',
+    height: '3vh',
     cursor: 'pointer',
   };
   const navStyle = {
@@ -107,7 +107,7 @@ export default function Home() {
     border: 'none',
     padding: '8px 12px',
     cursor: 'pointer',
-    fontSize: '1rem',
+    fontSize: 'clamp(0.8rem, 2vw, 1.0rem)', 
   };
   
 
@@ -120,6 +120,7 @@ export default function Home() {
           onMouseLeave={() => setIsHovering(false)}
         />
         <header style={headerStyle} 
+        className = 'headerSytle'
           onMouseEnter={() => setIsHovering(true)}
           onMouseLeave={() => setIsHovering(false)}
         >
@@ -157,7 +158,7 @@ export default function Home() {
 
       <footer style={footerStyle}>
         <div style={topRow}>
-          <p style={leftText}>EITA HOUSE (일단해 앱)</p>
+          <p style={leftText} className = 'leftText'>EITA HOUSE (일단해 앱)</p>
           <div style={linkGroup}>
             <Link href="/terms" style={linkStyle}>이용약관</Link>
             <Link href="/privacy" style={linkStyle}>개인정보방침</Link>
@@ -167,11 +168,34 @@ export default function Home() {
 
         <hr style={lineStyle} />
        
-        <div style={addressWrapper}>
-          <p style={addressStyle}>경기도 성남시 분당구 판교역로 136 (우)13529</p>
-          <p style={addressStyle}>Copyright © 2025 EITA HOUSE All rights reserved.</p>
+        <div style={addressWrapper} className = 'addressWrapper'>
+          <p style={addressStyle} className = 'addressStyle'>경기도 성남시 분당구 판교역로 136 (우)13529</p>
+          <p style={addressStyle} className = 'addressStyle'>Copyright © 2025 EITA HOUSE All rights reserved.</p>
         </div>
       </footer>
+
+
+      <style jsx>{`
+        @media (max-width: 480px) {
+          /* topRow 내부 텍스트(p.leftText), 구분선, 주소 영역 숨기기 */
+          footer > div:first-child,
+          footer > hr,
+          footer > div:last-child {
+            display: none;
+          }
+          /* 푸터 전체 중앙 정렬 & linkGroup만 보이도록 */
+          footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+          }
+          /* linkGroup 스타일 조정: 가로 중앙, 각 링크 간격 줄이기 */
+          div[style*="gap: 20px"] {
+            gap: 10px !important;
+          }
+        }
+      `}</style>
     </div>
   );
 }
@@ -183,7 +207,7 @@ const footerStyle = {
   backgroundColor: '#333',
   color: '#fff',
   padding: '40px 20px',
-  fontSize: '14px',
+  fontSize: 'clamp(0.8rem, 1vw, 1.2rem)',
 };
 
 const linkStyle = {
@@ -191,7 +215,7 @@ const linkStyle = {
   color: 'white',
   borderRadius: '5px',
   textDecoration: 'none',
-  fontSize: '0.8rem',
+  fontSize: 'clamp(0.3rem, 5vw, 0.8rem)',
 };
 
 const topRow = {
@@ -227,3 +251,6 @@ const addressStyle = {
   fontSize: '13px',
   margin: 0,
 };
+
+
+ 

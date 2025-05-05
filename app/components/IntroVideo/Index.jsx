@@ -119,17 +119,21 @@ export default function IntroVideo({ isActive }) {
 
   }
   const paragraphTitleStyle = {
-    fontSize: '1.8rem',
+    fontSize: 'clamp(0.7rem, 10vw, 1.5rem)',
     fontWeight: 'bold',
     marginTop: '20px',
+    paddingRight: '10px',
+    paddingLeft: '10px',
     justifyContent: 'center',                  // 수직 중앙 정렬
     alignItems: 'center', 
   };
   
   
   const paragraphStyle = {
-    fontSize: '1rem',
+    fontSize: 'clamp(0.3rem, 5vw, 1.0rem)',
     marginTop: '10px',
+    paddingRight: '10px',
+    paddingLeft: '10px',
     justifyContent: 'center',                  // 수직 중앙 정렬
     alignItems: 'center', 
   };

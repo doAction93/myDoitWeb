@@ -1,4 +1,8 @@
+import '../../globals.css';
+
 export default function Inquiry() {
+ 
+ 
   const inquiries = [
     {
       title: '일단해 쇼핑',
@@ -23,9 +27,9 @@ export default function Inquiry() {
   
   return (
     <div style={styles.background} >
-      <div style={styles.container}>
+      <div style={styles.container} className="inquiryContainer">
         {inquiries.map((inquiry, index) => (
-          <div key={index} style={styles.card}>
+          <div key={index} style={styles.card} className="inquiryCard">
             <h3 style={styles.title}>{inquiry.title}</h3>
             <p style={styles.subtitle}>
               <span style={styles.highlight}>{inquiry.highlight}</span> {inquiry.desc}

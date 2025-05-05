@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-
+import '../../globals.css';
 
 export default function AppDescription() {
   const cellphoneUrl = [
@@ -51,14 +51,21 @@ export default function AppDescription() {
     <div style={styles.container}>
       
       {/* 왼쪽: 이미지 */}
-      <div style={styles.imageContainer}>
+      <div 
+      className="imageContainer"
+      style={styles.imageContainer}>
             <img
                 src={cellphoneUrl[idx]}
           
           alt='App cellphone' 
           style={styles.image} 
         />
+
+       
       </div>
+
+      
+      
 
       {/* 오른쪽: 제목, 설명, 버튼들 */}
       <div style={styles.textContainer}>
@@ -91,6 +98,7 @@ export default function AppDescription() {
       </div>
 
     </div>
+    
   );
 }
 
@@ -115,6 +123,7 @@ const styles = {
     justifyContent: 'center',
     borderRadius: '20px',
   },
+  
   image: {
     width: '50vw', 
      // 부모 컨테이너 내부에서 가로로 꽉 채우되
@@ -126,15 +135,15 @@ const styles = {
     flex: 1,                    // 우측 영역(텍스트) 넓이 비율
     display: 'flex',
     flexDirection: 'column',
-    padding: '0 20px',
+   
   },
   title: {
-    fontSize: '2rem',
+    fontSize: 'clamp(0.5rem, 8vw, 2rem)',
     marginBottom: '16px',
     textAlign: 'left',
   },
   paragraph: {
-    fontSize: '1.1rem',
+    fontSize: 'clamp(0.1rem, 5vw, 1.1rem)',
     lineHeight: '1.5',
     marginTop: '8px',
     textAlign: 'left',
@@ -142,16 +151,26 @@ const styles = {
   list: {
     marginTop: '16px',
     paddingLeft: '20px',        // ul 기본 들여쓰기
-    fontSize: '1rem',
+    fontSize: 'clamp(0.1rem, 5vw, 1rem)',
     lineHeight: '1.6',
   },
   buttonContainer: {
     marginTop: '24px',
   },
   button: {
-    padding: '12px 24px',
-    fontSize: '1rem',
-    marginRight: '16px',        // 버튼 사이 간격
+    /* 반응형 폰트 크기 */
+    fontSize: 'clamp(0.8rem, 1.5vw, 1.5rem)',
+
+    /* 반응형 패딩 (세로, 가로) */
+    padding: 'clamp(0.1rem, 1.5vw, 0.3rem) clamp(0.1rem, 3vw, 1.0rem)',
+
+    /* 버튼 우측 간격도 반응형으로 */
+    marginRight: 'clamp(8px, 2vw, 16px)',
+
+    /* 너비/높이도 필요하다면 clamp로 지정 가능 */
+    width:  'clamp(80px, 20vw, 170px)',
+    height: 'clamp(40px, 6vh, 60px)',
+
     border: 'none',
     borderRadius: '4px',
     cursor: 'pointer',

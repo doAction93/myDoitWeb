@@ -96,11 +96,11 @@ const styles = {
   },
   title: {
   
-    fontSize: '1.8rem',
+    fontSize: 'clamp(1rem, 10vw, 1.8rem)',
     marginBottom: '16px',
   },
   paragraph: {
-    fontSize: '1rem',
+    fontSize: 'clamp(0.3rem, 4vw, 1rem)',
     lineHeight: 1.5,
     margin: '8px 0',
     animationDelay: '0s',      // 개별 애니메이션 지연 (기본값)
