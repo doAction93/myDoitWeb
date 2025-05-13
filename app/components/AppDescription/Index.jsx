@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import '../../globals.css';
 
+
+
 export default function AppDescription() {
   const cellphoneUrl = [
     '/cellphone1.svg', 
@@ -156,19 +158,24 @@ const styles = {
   },
   buttonContainer: {
     marginTop: '24px',
+    flex: 1,                    // 좌측 영역(이미지) 넓이 비율
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   button: {
     /* 반응형 폰트 크기 */
-    fontSize: 'clamp(0.8rem, 1.5vw, 1.5rem)',
+    fontSize: 'clamp(0.5rem, 1.3vw, 1.0rem)',
 
+   
     /* 반응형 패딩 (세로, 가로) */
-    padding: 'clamp(0.1rem, 1.5vw, 0.3rem) clamp(0.1rem, 3vw, 1.0rem)',
+    padding: 'clamp(0.1rem, 1.5vw, 0.2rem) clamp(0.1rem, 3vw, 0.4rem)',
 
     /* 버튼 우측 간격도 반응형으로 */
     marginRight: 'clamp(8px, 2vw, 16px)',
 
     /* 너비/높이도 필요하다면 clamp로 지정 가능 */
-    width:  'clamp(80px, 20vw, 170px)',
+    width:  'clamp(40px, 20vw, 170px)',
     height: 'clamp(40px, 6vh, 60px)',
 
     border: 'none',
