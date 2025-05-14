@@ -28,7 +28,7 @@ export default function MarketingPage() {
          <h1 style={{ fontSize: 'clamp(1rem, 5vw, 2rem)', marginBottom: '20px' }}>광고 수신 동의서</h1>
 
          <div>
-          <button
+          {/* <button
             onClick={handleBackClick}
             style={{
               backgroundColor: '#FA7852',  // 버튼 배경색
@@ -45,7 +45,7 @@ export default function MarketingPage() {
             }}
             >
             뒤로가기
-          </button>
+          </button> */}
 
           <a
               href="mailto:doaction93@gmail.com"

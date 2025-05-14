@@ -1,17 +1,42 @@
 'use client';
 
 import { useRouter } from 'next/navigation'; 
-
+import { useState } from 'react';
 
 export default function TermsPage() {
 
-       
+  const [copied, setCopied] = useState(false);
+  const email = 'doaction93@gmail.com';
         const router = useRouter();
 
   
   
-    const handleBackClick = () => {
-      router.replace("/");  // 이전 페이지로 돌아가기
+    // const handleBackClick = () => {
+    //   router.replace("/");  // 이전 페이지로 돌아가기
+    // };
+
+    const handleMail = (e) => {
+      e.preventDefault();
+  
+      // 1) mailto 스킴 호출 시도
+      const newWindow = window.open(
+        `mailto:${email}`,
+        '_blank', 
+        'noopener,noreferrer'
+      );
+  
+      // 2) 호출 실패 시(newWindow===null) → 클립보드에 복사
+      if (!newWindow) {
+        navigator.clipboard.writeText(email)
+          .then(() => {
+            setCopied(true);
+            setTimeout(() => setCopied(false), 2000);
+          })
+          .catch(() => {
+            // 복사도 실패할 경우 알림만 띄움
+            alert(`메일 앱을 열 수 없고, 주소 복사도 실패했습니다.\n수동으로: ${email}`);
+          });
+      }
     };
 
   
@@ -28,7 +53,7 @@ export default function TermsPage() {
 >
         <h1 style={{ fontSize: 'clamp(1rem, 5vw, 2rem)', marginBottom: '20px' }}>이용약관</h1>
         <div>
-          <button
+          {/* <button
             onClick={handleBackClick}
             style={{
               backgroundColor: '#FA7852',  // 버튼 배경색
@@ -45,10 +70,13 @@ export default function TermsPage() {
             }}
             >
             뒤로가기
-          </button>
+          </button> */}
 
           <a
-              href="mailto:doaction93@gmail.com"
+              href={`mailto:${email}`}
+              onClick={handleMail}
+              target="_blank"
+              rel="noopener noreferrer"
               style={{
                 display: 'inline-block',    // a 태그를 블록처럼
                 textDecoration: 'none',     // 밑줄 제거
@@ -72,6 +100,21 @@ export default function TermsPage() {
             문의하기
           </button>
           </a>
+
+          {copied && (
+            <div style={{
+              position: 'fixed',
+              bottom: '20px',
+              left: '50%',
+              transform: 'translateX(-50%)',
+              background: 'rgba(0,0,0,0.8)',
+              color: '#fff',
+              padding: '8px 16px',
+              borderRadius: '4px',
+            }}>
+              이메일 주소가 복사되었습니다!
+            </div>
+      )}
         </div>
        
       </div>

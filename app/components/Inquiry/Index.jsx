@@ -1,8 +1,10 @@
 import '../../globals.css';
+import React, { useState } from 'react';
 
 export default function Inquiry() {
  
- 
+  const [copied, setCopied] = useState(false);
+
   const inquiries = [
     {
       title: '일단해 쇼핑',
@@ -24,6 +26,22 @@ export default function Inquiry() {
     },
   ];
   
+
+  const handleMailto = (e, email) => {
+    e.preventDefault();
+    // 새 탭에서 mailto 호출
+    const opened = window.open(`mailto:${email}`, '_blank', 'noopener,noreferrer');
+
+    // 일부 브라우저는 window.open 반환값이 null이므로,
+    // mailto 링크 클릭 후 자동으로 포커스를 잃었다면 실패로 간주
+    if (!opened) {
+      // 클립보드에 이메일 주소 복사
+      navigator.clipboard.writeText(email).then(() => {
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      });
+    }
+  };
   
   return (
     <div style={styles.background} >
@@ -34,18 +52,39 @@ export default function Inquiry() {
             <p style={styles.subtitle}>
               <span style={styles.highlight}>{inquiry.highlight}</span> {inquiry.desc}
             </p>
-            <a href={`mailto:${inquiry.email}`} style={styles.button}>
+            <a 
+            href={`mailto:${inquiry.email}`} 
+            style={styles.button}
+            onClick={(e) => handleMailto(e, inquiry.email)}
+            target="_blank"
+            rel="noopener noreferrer"
+            >
               문의하기
             </a>
           </div>
         ))}
       </div>
 
+      {copied && (
+        <div className="toast">
+          메일 앱을 열 수 없어 이메일 주소를 복사했습니다.
+        </div>
+      )}
+
       {/* 스타일 정의 */}
       <style jsx>{`
         a:hover {
           background-color: #3b82f6;
           color: white;
+        }
+          .toast {
+          position: fixed;
+          bottom: 20px; left: 50%;
+          transform: translateX(-50%);
+          background: rgba(0,0,0,0.8);
+          color: #fff;
+          padding: 8px 16px;
+          border-radius: 4px;
         }
       `}</style>
    </div>

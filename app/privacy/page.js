@@ -32,7 +32,7 @@ export default function PrivacyPage() {
          <h1 style={{ fontSize: 'clamp(1rem, 5vw, 2rem)', marginBottom: '20px' }}>개인정보 처리방침</h1>
 
          <div>
-          <button
+          {/* <button
             onClick={handleBackClick}
             style={{
               backgroundColor: '#FA7852',  // 버튼 배경색
@@ -49,7 +49,7 @@ export default function PrivacyPage() {
             }}
             >
             뒤로가기
-          </button>
+          </button> */}
 
           <a
               href="mailto:doaction93@gmail.com"
