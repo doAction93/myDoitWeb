@@ -6,7 +6,10 @@ export default function MarketingPage() {
 
 
    const router = useRouter();
-    
+      const goToSupport = (e) => {
+        e.preventDefault();
+        router.push('/support');
+      };
 
         const handleBackClick = () => {
           router.back();  // 이전 페이지로 돌아가기
@@ -47,8 +50,10 @@ export default function MarketingPage() {
             뒤로가기
           </button> */}
 
-          <a
-              href="mailto:doaction93@gmail.com"
+            <a
+              onClick={goToSupport}
+              target="_blank"
+              rel="noopener noreferrer"
               style={{
                 display: 'inline-block',    // a 태그를 블록처럼
                 textDecoration: 'none',     // 밑줄 제거

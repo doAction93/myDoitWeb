@@ -5,8 +5,8 @@ import { useState } from 'react';
 
 export default function TermsPage() {
 
-  const [copied, setCopied] = useState(false);
-  const email = 'doaction93@gmail.com';
+  // const [copied, setCopied] = useState(false);
+  // const email = 'doaction93@gmail.com';
         const router = useRouter();
 
   
@@ -15,29 +15,34 @@ export default function TermsPage() {
     //   router.replace("/");  // 이전 페이지로 돌아가기
     // };
 
-    const handleMail = (e) => {
+    const goToSupport = (e) => {
       e.preventDefault();
-  
-      // 1) mailto 스킴 호출 시도
-      const newWindow = window.open(
-        `mailto:${email}`,
-        '_blank', 
-        'noopener,noreferrer'
-      );
-  
-      // 2) 호출 실패 시(newWindow===null) → 클립보드에 복사
-      if (!newWindow) {
-        navigator.clipboard.writeText(email)
-          .then(() => {
-            setCopied(true);
-            setTimeout(() => setCopied(false), 2000);
-          })
-          .catch(() => {
-            // 복사도 실패할 경우 알림만 띄움
-            alert(`메일 앱을 열 수 없고, 주소 복사도 실패했습니다.\n수동으로: ${email}`);
-          });
-      }
+      router.push('/support');
     };
+
+    // const handleMail = (e) => {
+    //   e.preventDefault();
+  
+    //   // 1) mailto 스킴 호출 시도
+    //   const newWindow = window.open(
+    //     `mailto:${email}`,
+    //     '_blank', 
+    //     'noopener,noreferrer'
+    //   );
+  
+    //   // 2) 호출 실패 시(newWindow===null) → 클립보드에 복사
+    //   if (!newWindow) {
+    //     navigator.clipboard.writeText(email)
+    //       .then(() => {
+    //         setCopied(true);
+    //         setTimeout(() => setCopied(false), 2000);
+    //       })
+    //       .catch(() => {
+    //         // 복사도 실패할 경우 알림만 띄움
+    //         alert(`메일 앱을 열 수 없고, 주소 복사도 실패했습니다.\n수동으로: ${email}`);
+    //       });
+    //   }
+    // };
 
   
 
@@ -73,8 +78,7 @@ export default function TermsPage() {
           </button> */}
 
           <a
-              href={`mailto:${email}`}
-              onClick={handleMail}
+              onClick={goToSupport}
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -101,7 +105,7 @@ export default function TermsPage() {
           </button>
           </a>
 
-          {copied && (
+          {/* {copied && (
             <div style={{
               position: 'fixed',
               bottom: '20px',
@@ -114,7 +118,7 @@ export default function TermsPage() {
             }}>
               이메일 주소가 복사되었습니다!
             </div>
-      )}
+      )} */}
         </div>
        
       </div>
