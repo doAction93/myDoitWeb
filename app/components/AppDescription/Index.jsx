@@ -84,18 +84,21 @@ export default function AppDescription() {
         </ul>
 
         <div style={styles.buttonContainer}>
+          
+     
           <button 
             style={styles.button} 
-            onClick={() => alert('android 준비중입니다. 곧 제공해드릴게요!')}
-          >
+            onClick={() => window.open('https://play.google.com/store/apps/details?id=com.myapp.doit', '_blank')}
+            >
             안드로이드 다운로드
-          </button>
-          <button 
-            style={styles.button} 
-            onClick={() => alert('iOS 준비중입니다. 곧 제공해드릴게요!')}
-          >
-            IOS 다운로드
-          </button>
+            </button>
+           
+            <button 
+              style={styles.button} 
+              onClick={() => window.open('https://apps.apple.com/kr/app/%EC%9D%BC%EB%8B%A8%ED%95%B4-%EC%B1%8C%EB%A6%B0%EC%A7%80-%EC%95%B1/id6737531186', '_blank')}
+            >
+              iOS 다운로드
+            </button>
         </div>
       </div>
 

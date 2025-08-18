@@ -75,6 +75,8 @@ export default function SupportPage() {
             >
                 이메일 문의</a><br />
               </p>
+
+              <p></p>
         </section>
 
         <section style={styles.section}>
