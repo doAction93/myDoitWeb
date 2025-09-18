@@ -6,7 +6,9 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate-image-index": "node scripts/generate-image-index.js",
+    "prebuild": "node scripts/generate-image-index.js"
   },
   "dependencies": {
     "next": "15.3.1",
@@ -16,6 +18,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "eslint": "^9",
-    "eslint-config-next": "15.3.1"
+    "eslint-config-next": "15.3.1",
+    "sharp": "^0.34.4"
   }
 }

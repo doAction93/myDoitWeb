@@ -15,7 +15,17 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: '일단해 - 습관교정 챌린지',
   description: '당신의 습관을 바꾸는 챌린지 앱',
-  viewport: "width=device-width, initial-scale=1",   // ← 이 한 줄 추가!
+  icons: {
+    icon: '/favicon.ico' // apple 항목 제거
+  }  // ← 이 한 줄 추가!
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  minimumScale: 1,
+  maximumScale: 1,
+  userScalable: true
 };
 
 export default function RootLayout({ children }) {

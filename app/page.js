@@ -170,6 +170,7 @@ export default function Home() {
        
         <div style={addressWrapper} className = 'addressWrapper'>
           <p style={addressStyle} className = 'addressStyle'>경기도 성남시 분당구 판교역로 136 (우)13529</p>
+          <p style={addressStyle} className = 'addressStyle'>통신판매번호</p>
           <p style={addressStyle} className = 'addressStyle'>Copyright © 2025 EITA HOUSE All rights reserved.</p>
         </div>
       </footer>
