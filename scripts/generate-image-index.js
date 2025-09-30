@@ -1,5 +1,11 @@
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
+
+function fileHash(fp) {
+  const buf = fs.readFileSync(fp);
+  return crypto.createHash('md5').update(buf).digest('hex').slice(0, 8);
+}
 
 const PUBLIC_DIR = path.join(__dirname, '..', 'public');
 const FOLDERS = ['thumbNail', 'img'];
@@ -15,13 +21,15 @@ FOLDERS.forEach(folder => {
     const fullPath = path.join(dir, file);
     const stat = fs.statSync(fullPath);
     const mtime = stat.mtimeMs;
+    const hash = fileHash(fullPath);
     out.push({
       folder,
       file,
       path: `/${folder}/${file}`,
-      fullUrl: `https://www.mydoit.co.kr/${folder}/${file}?v=${mtime}`,
+      fullUrl: `https://www.mydoit.co.kr/${folder}/${file}?v=${hash}`,
       size: stat.size,
-      mtime
+      mtime,
+      hash
     });
   });
 });
