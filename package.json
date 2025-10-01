@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "npm run generate:images && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate:images": "node scripts/generate-manifest.js"
   },
   "dependencies": {
     "next": "15.3.1",
