@@ -10,8 +10,22 @@ function fileHash(fp) {
 const PUBLIC_DIR = path.join(__dirname, '..', 'public');
 const FOLDERS = ['thumbNail', 'img'];
 
-const out = [];
+FOLDERS.forEach(folder => {
+  const dir = path.join(PUBLIC_DIR, folder);
+  if (!fs.existsSync(dir)) return;
 
+  // 1) 폴더 내 모든 이미지 파일 삭제 (주의)
+  fs.readdirSync(dir).forEach(f => {
+    if (/\.(png|jpe?g|webp|gif|avif)$/i.test(f)) {
+      fs.unlinkSync(path.join(dir, f));
+    }
+  });
+
+  // (이후에 이미지 재생성/배치 과정이 필요하면 여기서 처리)
+});
+
+// ------- 기존 로직처럼 새로 생성할 이미지가 이미 폴더에 들어있다면 인덱스 생성 -------
+const out = [];
 FOLDERS.forEach(folder => {
   const dir = path.join(PUBLIC_DIR, folder);
   if (!fs.existsSync(dir)) return;
