@@ -50,7 +50,7 @@ export default function AppDescription() {
   
   
   return (
-    <div style={styles.container}>
+    <div className="appDescription" style={styles.container}>
       
       {/* 왼쪽: 이미지 */}
       <div 
@@ -70,34 +70,41 @@ export default function AppDescription() {
       
 
       {/* 오른쪽: 제목, 설명, 버튼들 */}
-      <div style={styles.textContainer}>
-        <h2 style={styles.title}>프로젝트 성공시 주는 혜택!</h2>
-        <p style={styles.paragraph}>
-          매일 작은 목표를 달성하며 앱의 가치를 직접 경험하세요!
+      <div className="appDescriptionText" style={styles.textContainer}>
+        <h2 className="appDescriptionTitle" style={styles.title}>
+          <span aria-hidden="true">🎉</span>
+          프로젝트 성공 혜택
+        </h2>
+        <p className="appDescriptionParagraph" style={styles.paragraph}>
+          매일 작은 목표를 달성하고,<br className="mobileBreak" /> 특별한 성취를 경험해 보세요!
         </p>
 
         {/* 필요하다면 추가 설명/목록 등 삽입 */}
-        <ul style={styles.list}>
-          <li>단계별 목표로 눈에 보이는 성취</li>
-          <li>누적 포인트로 쇼핑/리워드 가능</li>
-          <li>커뮤니티와 함께 도전하면 동기부여↑</li>
+        <ul className="appDescriptionList" style={styles.list}>
+          <li><span aria-hidden="true">✅</span>{' '}<span>단계별 목표로 눈에 보이는 성취</span></li>
+          <li><span aria-hidden="true">🎁</span>{' '}<span>포인트를 모아 쇼핑과 리워드 즐기기</span></li>
+          <li><span aria-hidden="true">🔥</span>{' '}<span>커뮤니티와 함께 도전하며 동기부여 높이기</span></li>
         </ul>
 
-        <div style={styles.buttonContainer}>
+        <div className="downloadButtons" style={styles.buttonContainer}>
           
      
           <button 
+            className="downloadButton"
             style={styles.button} 
             onClick={() => window.open('https://play.google.com/store/apps/details?id=com.myapp.doit', '_blank')}
             >
-            안드로이드 다운로드
+            <span>안드로이드</span>{' '}
+            <span>다운로드</span>
             </button>
            
             <button 
+              className="downloadButton"
               style={styles.button} 
               onClick={() => window.open('https://apps.apple.com/kr/app/%EC%9D%BC%EB%8B%A8%ED%95%B4-%EC%B1%8C%EB%A6%B0%EC%A7%80-%EC%95%B1/id6737531186', '_blank')}
             >
-              iOS 다운로드
+              <span>iOS</span>{' '}
+              <span>다운로드</span>
             </button>
         </div>
       </div>

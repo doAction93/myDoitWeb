@@ -103,9 +103,13 @@ export default function IntroVideo({ isActive }) {
                 alignItems: 'center',                      // 수평 중앙 정렬
               }}
             >
-              <div style={paragraph} >
-                <h2 style={paragraphTitleStyle} className={isActive ? 'title' : ''}>작은 습관, 큰 변화! 일단해로 성장해요</h2>
-                <p style={paragraphStyle} className={isActive ? 'title' : ''}>단계별 챌린지로 나만의 포인트 쌓고 포인트로 쇼핑해요</p>
+              <div className="introCopy" style={paragraph} >
+                <h2 style={paragraphTitleStyle} className={`introTitle ${isActive ? 'title' : ''}`}>
+                  작은 습관, 큰 변화!<br className="mobileBreak" /> 일단해로 성장해요
+                </h2>
+                <p style={paragraphStyle} className={`introSubtitle ${isActive ? 'title' : ''}`}>
+                  단계별 챌린지로 나만의 포인트 쌓고<br className="mobileBreak" /> 포인트로 쇼핑해요
+                </p>
               </div>
 
               <div style={eggContainer} >
