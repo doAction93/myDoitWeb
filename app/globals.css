@@ -36,6 +36,55 @@ a {
   text-decoration: none;
 }
 
+.kakaoChannelButton {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 1200;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 54px;
+  padding: 12px 18px 12px 14px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 999px;
+  background: #fee500;
+  color: #191919;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.kakaoChannelButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.22);
+}
+
+.kakaoChannelButton:focus-visible {
+  outline: 3px solid rgba(25, 25, 25, 0.35);
+  outline-offset: 3px;
+}
+
+.kakaoChannelIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #191919;
+  color: #fee500;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.kakaoChannelText {
+  white-space: nowrap;
+}
+
 .mobileBreak {
   display: none;
 }
@@ -50,6 +99,20 @@ a {
   }
 }
 @media (max-width: 480px) {
+  .kakaoChannelButton {
+    right: 16px;
+    bottom: 16px;
+    min-height: 48px;
+    padding: 10px 14px 10px 11px;
+    font-size: 13px;
+  }
+
+  .kakaoChannelIcon {
+    width: 26px;
+    height: 26px;
+    font-size: 11px;
+  }
+
   /* 예: 컨테이너를 세로(column)로 바꾸기 */
   .headerSytle {
     display: none !important;

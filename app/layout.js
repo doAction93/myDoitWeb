@@ -37,6 +37,16 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
+        <a
+          className="kakaoChannelButton"
+          href="http://pf.kakao.com/_kQVcn"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="카카오 채널로 이동"
+        >
+          <span className="kakaoChannelIcon" aria-hidden="true">Ch</span>
+          <span className="kakaoChannelText">카카오 채널</span>
+        </a>
       </body>
     </html>
   );
