@@ -1,4 +1,5 @@
 // app/layout.js
+import { Analytics } from "@vercel/analytics/next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -37,6 +38,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
+        <Analytics />
         <a
           className="kakaoChannelButton"
           href="http://pf.kakao.com/_kQVcn"

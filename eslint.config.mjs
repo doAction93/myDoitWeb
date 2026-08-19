@@ -11,6 +11,9 @@ const compat = new FlatCompat({
 
 // Next.js 기본 설정을 가져온 뒤, 그 다음에 rules 오브젝트를 추가
 const eslintConfig = [
+  {
+    ignores: [".next/**", "node_modules/**", "out/**"],
+  },
   ...compat.extends("next/core-web-vitals"),
   {
     rules: {
