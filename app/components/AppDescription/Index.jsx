@@ -83,7 +83,7 @@ export default function AppDescription() {
         <ul className="appDescriptionList" style={styles.list}>
           <li><span aria-hidden="true">✅</span>{' '}<span>단계별 목표로 눈에 보이는 성취</span></li>
           <li><span aria-hidden="true">🎁</span>{' '}<span>포인트를 모아 쇼핑과 리워드 즐기기</span></li>
-          <li><span aria-hidden="true">🔥</span>{' '}<span>커뮤니티와 함께 도전하며 동기부여 높이기</span></li>
+          <li><span aria-hidden="true">🔥</span>{' '}<span>국적 인증을 완료한 멤버들과 함께 도전해 보세요</span></li>
         </ul>
 
         <div className="downloadButtons" style={styles.buttonContainer}>
