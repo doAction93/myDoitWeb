@@ -14,8 +14,34 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
+  metadataBase: new URL('https://www.mydoit.co.kr'),
   title: '일단해 - 습관교정 챌린지',
   description: '당신의 습관을 바꾸는 챌린지 앱',
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: '일단해 - 습관교정 챌린지',
+    description: '당신의 습관을 바꾸는 챌린지 앱',
+    url: '/',
+    siteName: '일단해',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: '일단해 - 습관교정 챌린지 앱',
+      },
+    ],
+    locale: 'ko_KR',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '일단해 - 습관교정 챌린지',
+    description: '당신의 습관을 바꾸는 챌린지 앱',
+    images: ['/og-image.png'],
+  },
   icons: {
     icon: '/favicon.ico' // apple 항목 제거
   }  // ← 이 한 줄 추가!
