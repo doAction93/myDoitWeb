@@ -13,8 +13,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl = 'https://www.mydoit.co.kr';
+const ogImageUrl = `${siteUrl}/og-image-20260824.png`;
+
 export const metadata = {
-  metadataBase: new URL('https://www.mydoit.co.kr'),
+  metadataBase: new URL(siteUrl),
   title: '일단해 - 습관교정 챌린지',
   description: '당신의 습관을 바꾸는 챌린지 앱',
   alternates: {
@@ -27,9 +30,10 @@ export const metadata = {
     siteName: '일단해',
     images: [
       {
-        url: '/og-image.png',
+        url: '/og-image-20260824.png',
         width: 1200,
         height: 630,
+        type: 'image/png',
         alt: '일단해 - 습관교정 챌린지 앱',
       },
     ],
@@ -40,7 +44,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: '일단해 - 습관교정 챌린지',
     description: '당신의 습관을 바꾸는 챌린지 앱',
-    images: ['/og-image.png'],
+    images: ['/og-image-20260824.png'],
   },
   icons: {
     icon: '/favicon.ico' // apple 항목 제거
@@ -61,6 +65,10 @@ export default function RootLayout({ children }) {
       <head>
         {/* 전역 CSS, 폰트 로드 등 여기서 해도 되고 */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:image:secure_url" content={ogImageUrl} />
+        <meta property="og:image:type" content="image/png" />
+        <meta name="thumbnail" content={ogImageUrl} />
+        <link rel="image_src" href={ogImageUrl} />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
