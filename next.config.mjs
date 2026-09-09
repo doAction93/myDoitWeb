@@ -4,6 +4,19 @@ const nextConfig = {
     async headers() {
       return [
         {
+          source: "/app-ads.txt",
+          headers: [
+            {
+              key: "Content-Type",
+              value: "text/plain; charset=utf-8"
+            },
+            {
+              key: "Cache-Control",
+              value: "public, max-age=0, s-maxage=300, stale-while-revalidate=600"
+            }
+          ]
+        },
+        {
           source: "/shoppingList.json",
           headers: [
             {
